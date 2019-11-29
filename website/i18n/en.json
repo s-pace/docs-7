@@ -328,6 +328,12 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
+      "Orda/overview": {
+        "title": "Overview"
+      },
+      "Orda/quickTour": {
+        "title": "A Quick Tour in ORDA"
+      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
