@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Essential Guides for 4D Developers",
+    "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -343,6 +343,9 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "Project/pictures": {
+        "title": "Pictures"
+      },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
@@ -350,9 +353,7 @@
         "title": "Overview"
       }
     },
-    "links": {
-      "Developer Center": "Developer Center"
-    },
+    "links": {},
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
@@ -366,7 +367,6 @@
     }
   },
   "pages-strings": {
-    "Documentation for 4D developers|no description given": "Documentation for 4D developers",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
