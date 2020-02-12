@@ -129,6 +129,9 @@
       "FormObjects/formObjectsOverview": {
         "title": "About 4D Form Objects"
       },
+      "FormObjects/forms": {
+        "title": "Forms"
+      },
       "FormObjects/groupBox": {
         "title": "Group Box"
       },
@@ -233,6 +236,9 @@
       },
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
+      },
+      "FormObjects/propertiesForm": {
+        "title": "Form Properties"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "Radio Button"
