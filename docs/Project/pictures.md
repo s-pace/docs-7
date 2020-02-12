@@ -5,14 +5,14 @@ title: Pictures
 
 ## Native Formats Supported  
 
-4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: static pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
 
 4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras. 
 
 *	Windows, 4D uses WIC (Windows Imaging Component). 
 *	macOS, 4D uses ImageIO.
 
-The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
+The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding.
 
 The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
 
@@ -49,7 +49,14 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ### Picture Resolution
 
-4D supports both standard and high resolution displays on both macOS and Windows platforms. 
+4D supports high resolution displays on both macOS and Windows platforms for the following:
+
+*	Static pictures
+*	3D buttons/radio/check boxes
+*	Picture buttons/pop-ups
+*	Tab controls
+*	Menu icons
+*	List box headers
 
 High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.). 
 
@@ -62,12 +69,21 @@ The following table demonstrates the difference between display resolution and p
 
 When using high resolution pictures, the scale factor is specified by adding "@nx" in the picture's name (*n* designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*. 
 
->4D automatically prioritizes pictures with the highest resolution.
+4D automatically prioritizes pictures with the highest resolution.
 <br><br> **Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
->
->Note that this prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing. 
 
-This resolution behavior is supported for project databases by all [4D form objects](../FormObjects/formObjectsOverview.html) which support images. 
+>Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing. 
+
+The automatic resolution prioritization is supported in project databases by all [4D form objects](../FormObjects/formObjectsOverview.html) that support images, however there are some behavioral differences depending on screen dpi*(\*)*, picture format, and/or how the picture is added:
+
+|Behavior|Format|
+|---|---|
+|Cut / Paste|If the picture is a:<p><ul><li>**Standard dpi** -  it is "Center" formatted and the object containing the picture has the same number of pixels.</li><li>**Non-standard dpi** - the picture is "Scaled to fit center" formatted and the object containing the picture is equal to **(X * Y ) / Z** <p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi* <p>|
+|Automatic sizing|If the picture is<p><ul><li>**"Scaled"** - The created object is resized according to **(X * Y ) / Z**<p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi*  </li> <li>**Not "Scaled"** - the object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+
+*(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
+
+
 
 
 
