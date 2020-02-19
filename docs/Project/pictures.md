@@ -51,7 +51,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either [scale factor](#scale-factor) or [dpi](#dpi).
 
-#### Scale factor 
+#### Scale factor (macOS only)
 
 High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.). 
 
@@ -81,14 +81,14 @@ High resolution pictures with the @nx convention can be used in the following ob
 
 
 
-#### DPI
+#### DPI (macOs and Windows)
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
 |Operation |Behavior|
 |---|---|
-|Cut / Paste|If the picture has a:<p><ul><li>**72dpi / 96dpi / no dpi** -  The picture is "[Center](../FormObjects/propertiesPicture.html#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "Scaled to fit center" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi) <p>|
-|Automatic resizing|If the picture is:<p><ul><li>**"[Scaled](../FormObjects/propertiesPicture.html#scaled-to-fit)"** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+|Drop or Paste|If the picture has:<p><ul><li>**72dpi or 96dpi** -  The picture is "[Center](../FormObjects/propertiesPicture.html#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**No dpi** - The picture is "[Scaled to fit](../FormObjects/propertiesPicture.html#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi) <p><li>**Other dpi** - The picture is "Scaled to fit center" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi) <p>|
+|Automatic Size (Form Editor context menu)|If the picture's display format  is:<p><ul><li>**"[Scaled](../FormObjects/propertiesPicture.html#scaled-to-fit)"** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
