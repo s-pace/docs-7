@@ -47,16 +47,11 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 
 
-### Picture Resolution
+### High Resolution Pictures
 
-4D supports high resolution displays on both macOS and Windows platforms for the following:
+4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either [scale factor](#scale-factor) or [dpi](#dpi).
 
-*	Static pictures
-*	3D buttons/radio/check boxes
-*	Picture buttons/pop-ups
-*	Tab controls
-*	Menu icons
-*	List box headers
+#### Scale factor 
 
 High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.). 
 
@@ -67,19 +62,33 @@ The following table demonstrates the difference between display resolution and p
 |Standard Resolution|1:1 pixel density.| **1x**<br>![](assets/en/Project/pictureScale1.png)<br>*circle.png*
 |High Resolution| Pixel density increased by a factor of 2 or 3.|<table><th>2x</th><th>3x</th><tr><td>![](assets/en/Project/pictureScale2.png)<br>*circle@2x.png*</td><td>![](assets/en/Project/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>
 
-When using high resolution pictures, the scale factor is specified by adding "@nx" in the picture's name (*n* designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*. 
+When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*. 
+
+High resolution pictures with the @nx convention can be used in the following objects:
+
+*	Static pictures
+*	3D buttons/radio/check boxes
+*	Picture buttons/pop-ups
+*	Tab controls
+*	Menu icons
+*	List box headers
+
 
 4D automatically prioritizes pictures with the highest resolution.
 <br><br> **Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
 
 >Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing. 
 
-The automatic resolution prioritization is supported in project databases by all [4D form objects](../FormObjects/formObjectsOverview.html) that support images, however there are some behavioral differences depending on screen dpi*(\*)*, picture format, and/or how the picture is added:
+
+
+#### DPI
+
+While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, picture format, and/or how the picture is added:
 
 |Behavior|Format|
 |---|---|
-|Cut / Paste|If the picture is a:<p><ul><li>**Standard dpi** -  it is "Center" formatted and the object containing the picture has the same number of pixels.</li><li>**Non-standard dpi** - the picture is "Scaled to fit center" formatted and the object containing the picture is equal to **(X * Y ) / Z** <p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi* <p>|
-|Automatic sizing|If the picture is<p><ul><li>**"Scaled"** - The created object is resized according to **(X * Y ) / Z**<p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi*  </li> <li>**Not "Scaled"** - the object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+|Cut / Paste|If the picture has a:<p><ul><li>**Standard/no dpi** -  The picture is "Center" formatted and the object containing the picture has the same number of pixels.</li><li>**Non-standard dpi** - The picture is "Scaled to fit center" formatted and the object containing the picture is equal to **(X * Y ) / Z** <p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi* <p>|
+|Automatic sizing|If the picture is<p><ul><li>**"Scaled"** - The object containing the picture is resized according to **(X * Y ) / Z**<p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi*  </li> <li>**Not "Scaled"** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
