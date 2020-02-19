@@ -87,8 +87,8 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 
 |Behavior|Format|
 |---|---|
-|Cut / Paste|If the picture has a:<p><ul><li>**Standard/no dpi** -  The picture is "Center" formatted and the object containing the picture has the same number of pixels.</li><li>**Non-standard dpi** - The picture is "Scaled to fit center" formatted and the object containing the picture is equal to **(X * Y ) / Z** <p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi* <p>|
-|Automatic sizing|If the picture is<p><ul><li>**"Scaled"** - The object containing the picture is resized according to **(X * Y ) / Z**<p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi*  </li> <li>**Not "Scaled"** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+|Cut / Paste|If the picture has a:<p><ul><li>**72dpi / 96cpi / no dpi** -  The picture is "[Center](../FormObjects/propertiesPicture.html#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Non-standard dpi** - The picture is "[Scaled to fit center](../FormObjects/propertiesPicture.html#scaled-to-fit)" formatted and the object containing the picture is equal to **(X * Y ) / Z** <p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi* <p>|
+|Automatic sizing|If the picture is:<p><ul><li>**"Scaled"** - The object containing the picture is resized according to **(X * Y ) / Z**<p><p>*X = number of pixels, Y = screen dpi, Z = picture's dpi*  </li> <li>**Not "Scaled"** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
