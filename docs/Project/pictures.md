@@ -83,12 +83,12 @@ High resolution pictures with the @nx convention can be used in the following ob
 
 #### DPI
 
-While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, picture format, and/or how the picture is added:
+While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
-|Behavior|Format|
+|Operation |Behavior|
 |---|---|
-|Cut / Paste|If the picture has a:<p><ul><li>**72dpi / 96dpi / no dpi** -  The picture is "[Center](../FormObjects/propertiesDisplay.html#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit center](../FormObjects/propertiesDisplay.html#scaled-to-fit-proportional-and-scaled-to-fit-centered-proportional)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi) <p>|
-|Automatic sizing|If the picture is:<p><ul><li>**"[Scaled](#scaled-to-fit)"** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not "Scaled"** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+|Cut / Paste|If the picture has a:<p><ul><li>**72dpi / 96dpi / no dpi** -  The picture is "[Center](../FormObjects/propertiesPicture.html#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "Scaled to fit center" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi) <p>|
+|Automatic resizing|If the picture is:<p><ul><li>**"[Scaled](../FormObjects/propertiesPicture.html#scaled-to-fit)"** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
