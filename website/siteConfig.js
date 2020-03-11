@@ -46,7 +46,7 @@ const siteConfig = {
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
 
-	//{href: 'https://developer.4d.com/', label:'Developer Center'},
+	{href: 'https://developer.4d.com/docs/18/', label:'v18.x'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
     //{blog: false, label: 'Blog'},
