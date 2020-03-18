@@ -27,13 +27,13 @@
         "title": "配列"
       },
       "Concepts/branching": {
-        "title": "Branching structures"
+        "title": "分岐構造"
       },
       "Concepts/looping": {
-        "title": "Looping structures"
+        "title": "ループ構造"
       },
       "Concepts/components": {
-        "title": "Components"
+        "title": "コンポーネント"
       },
       "Concepts/data-types": {
         "title": "データタイプの概要"
@@ -75,16 +75,16 @@
         "title": "バリアント"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "エラー処理"
       },
       "Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "制御フロー"
       },
       "Concepts/identifiers": {
         "title": "Identifiers"
       },
       "Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
         "title": "メソッド"
@@ -834,13 +834,13 @@
         "title": "配列"
       },
       "version-18.0-Concepts/branching": {
-        "title": "Branching structures"
+        "title": "分岐構造"
       },
       "version-18.0-Concepts/looping": {
-        "title": "Looping structures"
+        "title": "ループ構造"
       },
       "version-18.0-Concepts/components": {
-        "title": "Components"
+        "title": "コンポーネント"
       },
       "version-18.0-Concepts/data-types": {
         "title": "データタイプの概要"
@@ -882,16 +882,16 @@
         "title": "バリアント"
       },
       "version-18.0-Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "エラー処理"
       },
       "version-18.0-Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "制御フロー"
       },
       "version-18.0-Concepts/identifiers": {
         "title": "Identifiers"
       },
       "version-18.0-Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "インタープリターモードとコンパイル済みモード"
       },
       "version-18.0-Concepts/methods": {
         "title": "メソッド"
