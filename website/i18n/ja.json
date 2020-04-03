@@ -32,9 +32,6 @@
       "Concepts/looping": {
         "title": "ループ構造"
       },
-      "Concepts/classes": {
-        "title": "Classes"
-      },
       "Concepts/components": {
         "title": "コンポーネント"
       },
@@ -289,13 +286,13 @@
         "title": "概要"
       },
       "FormEditor/stylesheets": {
-        "title": "スタイルシート"
+        "title": "Style sheets"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
       "FormObjects/buttonOverview": {
-        "title": "ボタン"
+        "title": "Button"
       },
       "FormObjects/buttonGridOverview": {
         "title": "Button Grid"
@@ -310,7 +307,7 @@
         "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "4D フォームオブジェクトについて"
+        "title": "About 4D Form Objects"
       },
       "FormObjects/groupBox": {
         "title": "Group Box"
@@ -522,9 +519,6 @@
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
-      },
-      "Project/documentation": {
-        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "概要"
@@ -816,7 +810,7 @@
         "sidebar_label": "Activity analysis Page"
       },
       "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
-        "title": "ピクチャー"
+        "title": "Pictures"
       },
       "version-18.0-Backup/backup": {
         "title": "Backup"
@@ -919,13 +913,13 @@
         "title": "変数"
       },
       "version-18.0-FormEditor/stylesheets": {
-        "title": "スタイルシート"
+        "title": "Style sheets"
       },
       "version-18.0-FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
       "version-18.0-FormObjects/buttonOverview": {
-        "title": "ボタン"
+        "title": "Button"
       },
       "version-18.0-FormObjects/buttonGridOverview": {
         "title": "Button Grid"
@@ -940,7 +934,7 @@
         "title": "Drop-down List"
       },
       "version-18.0-FormObjects/formObjectsOverview": {
-        "title": "4D フォームオブジェクトについて"
+        "title": "About 4D Form Objects"
       },
       "version-18.0-FormObjects/groupBox": {
         "title": "Group Box"

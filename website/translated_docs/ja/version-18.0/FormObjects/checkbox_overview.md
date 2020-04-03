@@ -79,13 +79,13 @@ For detailed information on these actions, please refer to the [Standard actions
 
 ## Check box button styles
 
-Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
+Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. 違いは、関連づけられた変数の処理にあります。
+With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables.
 
 4D provides check boxes in the following predefined styles:
 
-### 通常
+### Regular
 
 The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
@@ -365,7 +365,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
             }
     
 
-## プロパティ一覧
+## Supported Properties
 
 All check boxes share the same set of basic properties:
 

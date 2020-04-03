@@ -24,7 +24,7 @@ This property designates the type of the [active or inactive form object](formOb
 
 * * *
 
-## オブジェクト名
+## Object Name
 
 Each active form object is associated with an object name. Each object name must be unique.
 
