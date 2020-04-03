@@ -10,7 +10,7 @@
 		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time","Concepts/variant"
         ]
       },
-	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared","Concepts/classes",
+	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared",
 	     {
         "type": "subcategory",
         "label": "Control Flow",
