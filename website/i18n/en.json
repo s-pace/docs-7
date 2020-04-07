@@ -520,9 +520,6 @@
       "Project/developing": {
         "title": "Developing a project"
       },
-      "Project/documentation": {
-        "title": "Documenting a project"
-      },
       "Project/overview": {
         "title": "Overview"
       },
@@ -661,11 +658,6 @@
     "Developing a Web application|no description given": "Developing a Web application",
     "Developing a Mobile application|no description given": "Developing a Mobile application",
     "Administration|no description given": "Administration",
-    "New versions of this project are released every so often.|no description given": "New versions of this project are released every so often.",
-    "Latest version (BETA)|no description given": "Latest version (BETA)",
-    "This is the default version displayed when you connect to developer.4d.com/docs.|no description given": "This is the default version displayed when you connect to developer.4d.com/docs.",
-    "Documentation of the current 4D versions.|no description given": "Documentation of the current 4D versions.",
-    "You can find past versions of this project on|no description given": "You can find past versions of this project on",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"

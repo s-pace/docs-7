@@ -42,18 +42,18 @@ function HomeSplash(props) {
           />
 			{siteConfig.tagline}
         </h1>
-		 <div className="inner">
-           <PromoSection>
-            <Button href="https://developer.4d.com/docs/18/">v18</Button>
-            <Button href="https://developer.4d.com/docs/18Rx/">v18 R2 BETA</Button>
-            <Button href="https://developer.4d.com/docs/18RxBETA/">v18 R3</Button>
-          </PromoSection>
-        </div>
 
       </div>
     </div>
   );
 }
+		// juste en dessous /h1 <div className="inner">
+         //  <PromoSection>
+          //  <Button href="https://developer.4d.com/docs/18/">v18</Button>
+           // <Button href="https://developer.4d.com/docs/18Rx/">v18 R2 BETA</Button>
+          //  <Button href="https://developer.4d.com/docs/18RxBETA/">v18 R3</Button>
+       //   </PromoSection>
+      //  </div>
 
 class Button extends React.Component {
   render() {
