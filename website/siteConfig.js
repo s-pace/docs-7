@@ -23,10 +23,10 @@ const users = [
 const siteConfig = {
   title: '4D Documentation' /* title for your website */,
   tagline: 'Documentation for 4D Developers',
-  url: 'https://4d.github.io' /* your website url */,
+  url: 'https://doc4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,
-  baseUrl: '/docs/' /* base url for your project */,
+  baseUrl: '/Rx/' /* base url for your project */,
 // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
