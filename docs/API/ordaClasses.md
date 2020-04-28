@@ -24,23 +24,25 @@ The following ORDA class objects are available:
 
 |ORDA object|Class|Instanciated by|
 |---|---|---|
-|datastore|cs.dbNameDataStore|`ds` command|
-|remoteDatastore|cs.localIdDataStore|`Open datastore` command|
-|dataClassX|cs.DataClassX|dataStore.DataClassX, dataStore[DataClassX]|
-|entity from dataClassX|cs.DataClassXEntity|dataClass.get(), dataClass.new(), entitySelection.first(), entitySelection.last(), entity.previous(), entity.next(), entity.first(), entity.last(), entity.clone()|
-|entitySelection from dataClassX|cs.DataClassXSelection|dataClass.query(),entitySelection.query(), dataClass.all(), dataClass.fromCollection(), dataClass.newSelection(), entitySelection.drop(), entity.getSelection(), entitySelection.and(), entitySelection.minus(), entitySelection.or(), entitySelection.orderBy(), entitySelection.orderByFormula(), entitySelection.slice(), Create entity selection|
+|datastore|cs.*dbName*DataStore|`ds` command|
+|remoteDatastore|cs.*localId*DataStore|`Open datastore` command|
+|dataClassX|cs.*DataClassX*|dataStore.DataClassX, dataStore[DataClassX]|
+|entity from dataClassX|cs.*DataClassX*Entity|dataClass.get(), dataClass.new(), entitySelection.first(), entitySelection.last(), entity.previous(), entity.next(), entity.first(), entity.last(), entity.clone()|
+|entitySelection from dataClassX|cs.*DataClassX*Selection|dataClass.query(),entitySelection.query(), dataClass.all(), dataClass.fromCollection(), dataClass.newSelection(), entitySelection.drop(), entity.getSelection(), entitySelection.and(), entitySelection.minus(), entitySelection.or(), entitySelection.orderBy(), entitySelection.orderByFormula(), entitySelection.slice(), Create entity selection|
 
+>*dbName* is the .4DProject file name
 
 ## DataStore Class
 
 
 ### Local datastore
 
-A 4D database exposes its own DataStore class in the `cs` class store. Exposed name is *dbName*DataStore (where *dbName* is the .4DProject file name). 
+A 4D database exposes its own DataStore class in the `cs` class store. 
 
-Example:
+- **Inherit from**: _DataStore 
+- **Exposed name**: *dbName*DataStore (where *dbName* is the .4DProject file name)
 
-Database file name|DataStore class name|
+|Database file name|DataStore class name|
 |---|---|
 |Employee.4DProject|cs.EmployeeDataStore|
  
@@ -66,9 +68,9 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 ### Remote datastore
 
-A session opened on a remote datastore is referenced through a `localId`. The `localId` is referenced in the `cs` class store. Exposed name is *localId*dDataStore (where *localId* is the ID of the remote datastore, as defined by the `Open datastore` command). 
+A session opened on a remote datastore is referenced through a `localId`. The `localId` is referenced in the `cs` class store. 
 
-Example:
+- **Exposed name**: *localId*DataStore (where *localId* is the ID of the remote datastore, as defined by the `Open datastore` command). 
 
 LocalID|DataStore class name|
 |---|---|
@@ -80,17 +82,16 @@ The *localId*DataStore class can be referenced in the code editor, but you canno
 
 
 
-## DataClass
+## DataClass Class
 
-Each table of the database already exposed with ORDA offers a DataClass class in the `cs` class store.
+Each table exposed with ORDA of the database offers a DataClass class in the `cs` class store.
 
-Exposed class name is DataClass*X* (where *X* is the table name). 
+- **Inherit from**: DataClass 
+- **Exposed name**: *DataClassX* (where *DataClassX* is the table name). 
 
-Example:
-
-Database table name|DataStore class name|
+|Table name|DataClass class name|
 |---|---|
-|Employee|cs.DataClassEmployee|
+|Employee|cs.Employee|
 
 Example:
 
@@ -102,11 +103,84 @@ Class extends DataClass
 
 // Returns companies which revenue is over the average
 // Returns an entity selection related to the DataClass Company 
+
 Function GetBestOnes()
 $sel:=This.query("revenues >= :1";This.all().average("revenues"));
 $0:=$sel
 ```
 
+Then, you can get an entity selection of the "best" companies by executing: 
 
-Then on a form, you can display the best companies by getting this entity selection: ds.Company.GetBestOnes()
+```4d
+var $best : cs.Company 
+$best:=ds.Company.GetBestOnes()
+```
 
+## EntitySelection Class
+
+Each table exposed with ORDA of the database offers an EntitySelection class in the `cs` class store.
+
+- **Inherit from**: EntitySelection 
+- **Exposed name**: *DataClassX*Selection (where *DataClassX* is the table name). 
+
+|Table name|EntitySelection class name|
+|---|---|
+|Employee|cs.EmployeeSelection|
+
+
+Example:
+
+```4d
+// cs.EmployeeSelection class
+
+
+Class extends EntitySelection
+
+// Returns the average value of an attribute
+// in an entity selection
+
+Function getAverage()
+    var $attribute,$1 : text
+    $attribute:=$1
+    $0:=This.average($attribute)
+
+```
+
+Then, you can get any average value of the selection by executing: 
+
+```4d
+$avgSalary:=ds.Company.all().employees.getAverage("salary")
+$avgSalary:=ds.Company.all().employees.getAverage("age")
+```
+
+## Entity Class
+
+Each table exposed with ORDA of the database offers an Entity class in the `cs` class store.
+
+- **Inherit from**: Entity 
+- **Exposed name**: *DataClassX*Entity (where *DataClassX* is the table name). 
+
+|Table name|Entity class name|
+|---|---|
+|Employee|cs.EmployeeEntity|
+
+Example:
+
+```4d
+// cs.EmployeeEntity class
+
+
+Class extends Entity
+
+// Returns the age using the birthdate
+
+Function age()
+	$0:=Year of(Current date)-Year of(This.birthdate)
+
+```
+
+Then, you can get the age of an employee: 
+
+```4d
+$age:=ds.Employee(1).age()
+```
